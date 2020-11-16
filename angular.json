@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "neeva"
+    }
+  },
+  "defaultProject": "neeva",
+  "cli": {
+    "analytics": false
+  }
 }

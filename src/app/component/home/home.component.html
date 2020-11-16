@@ -1,0 +1,58 @@
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+  <app-search (onSelectedOption)="onSelectedOption($event)"></app-search>
+
+</div>
+<h2 style="text-align:center">Result</h2>
+
+<div *ngFor="let posts of post" class="group">
+  <h2 style="text-align:center"> Data from Tweets</h2>
+  <p><b>User :</b>{{posts.user}}</p>
+  <p><b>Message :</b> {{posts.message}}</p>
+  <p><b>Tweet Posted at: </b>{{posts.timestamp | date:'fullDate' }}</p>
+
+</div>
+
+
+
+<div *ngFor="let calendars of calendar" class="group">
+  <h2 style="text-align:center"> Data from Calendar</h2>
+  <p><b>Item :</b>{{calendars.id}}</p>
+  <p><b>Title :</b> {{calendars.title}}</p>
+  <p><b>Invitees: </b>{{calendars.invitees}}</p>
+
+  <p><b>Date: </b>{{calendars.date | date:'short'}}</p>
+</div>
+
+
+<div *ngFor="let contacts of contact" class="group">
+  <h2 style="text-align:center"> Data from Contacts</h2>
+  <p><b>ID :</b>{{contacts.contactid}}</p>
+  <p><b>Name :</b> {{contacts.name}}</p>
+  <p><b>Company: </b>{{contacts.company}}</p>
+  <p><b>Email: </b>{{contacts.emails}}</p>
+  <p><b>Phone: </b>{{contacts.phones}}</p>
+  <p><b>Last Contact: </b>{{contacts.last_contact | date:'fullDate'}}</p>
+</div>
+
+
+
+<div *ngFor="let slacks of slack" class="group">
+  <h2 style="text-align:center"> Data from Slack</h2>
+  <p><b>ID :</b>{{slacks.slackid}}</p>
+  <p><b>Channel :</b> {{slacks.channel}}</p>
+  <p><b>Author: </b>{{slacks.author}}</p>
+  <p><b>Message: </b>{{slacks.msg}}</p>
+  <p><b>Time: </b>{{slacks.ts | date:'short'}}</p>
+
+</div>
+
+
+<div *ngFor="let db of dropbox" class="group">
+  <h2 style="text-align:center"> Data from DropBox</h2>
+  <p><b>ID :</b>{{db.dbid}}</p>
+  <p><b>Document Path :</b> {{db.path}}</p>
+  <p><b>Title: </b>{{db.title}}</p>
+  <p><b>Shared with: </b>{{db.shared_with}}</p>
+  <p><b>Created: </b>{{db.created | date:'fullDate'}}</p>
+
+</div>
